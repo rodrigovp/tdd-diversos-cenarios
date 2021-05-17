@@ -1,6 +1,6 @@
 # tdd-diversos-cenarios
-Live code da apresentação de TDD realizada em 21/12/2020 para o time de Java e em 15/01/2021 para o time de engenharia.
+Live code da apresentação de TDD realizada em 14/12/2020 para o time de Java e em 15/01/2021 para o time de engenharia.
 
-O código com os testes está na branch gabarito.
+# organização
 
-Boa leitura!
+A branch _main_ contém um projeto em branco. A branch _gabarito_ contém códigos em vários cenários (descritos na apresentação) criados por meio da técnica TDD.

@@ -1,5 +1,7 @@
 package org.picpay.tdddiversoscenarios.monolito;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Gerente {
@@ -11,10 +13,15 @@ public class Gerente {
 	}
 
 	public void selecionar(List<Transacao> transacoes) {
+		transacoes = removerRepetidos(transacoes);
 		transacoes.forEach(transacao -> {
 			if(transacao.possuiValorBaixo()) {
 				repositorioTransacoes.guardar(transacao);
 			}
 		});
+	}
+
+	List<Transacao> removerRepetidos(List<Transacao> transacoes) {
+		return new ArrayList<Transacao>(new HashSet<Transacao>(transacoes));
 	}
 }
