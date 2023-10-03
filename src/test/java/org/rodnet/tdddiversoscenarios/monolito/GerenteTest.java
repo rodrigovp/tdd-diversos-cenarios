@@ -1,4 +1,4 @@
-package org.picpay.tdddiversoscenarios.monolito;
+package org.rodnet.tdddiversoscenarios.monolito;
 
 import static java.math.BigDecimal.TEN;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -6,7 +6,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static org.picpay.tdddiversoscenarios.monolito.TransacaoTest.umaTransacaoValidaQualquer;
+import static org.rodnet.tdddiversoscenarios.monolito.TransacaoTest.umaTransacaoValidaQualquer;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -28,8 +28,8 @@ class GerenteTest {
 	
 	@Test
 	void somenteGuardarTransacoesComValorMaiorQue10() {
-		Transacao transacaoPequena = umaTransacaoValidaQualquer(TEN);
-		Transacao transacaoGrande = umaTransacaoValidaQualquer(TEN.add(BigDecimal.ONE));
+		Transacao transacaoPequena = TransacaoTest.umaTransacaoValidaQualquer(TEN);
+		Transacao transacaoGrande = TransacaoTest.umaTransacaoValidaQualquer(TEN.add(BigDecimal.ONE));
 		
 		gerente.selecionar(Arrays.asList(transacaoPequena, transacaoGrande));
 		
@@ -39,7 +39,7 @@ class GerenteTest {
 	
 	@Test
 	void naoGuardarTransacoesRepetidas() {
-		Transacao transacao = umaTransacaoValidaQualquer(TEN);
+		Transacao transacao = TransacaoTest.umaTransacaoValidaQualquer(TEN);
 		
 		gerente.selecionar(Arrays.asList(transacao, transacao));
 		
@@ -48,7 +48,7 @@ class GerenteTest {
 	
 	@Test
 	void removerRepetidos() {
-		Transacao transacao = umaTransacaoValidaQualquer(TEN);
+		Transacao transacao = TransacaoTest.umaTransacaoValidaQualquer(TEN);
 		List<Transacao> transacoes = Arrays.asList(transacao, transacao);
 		
 		assertThat(transacoes).contains(transacao, transacao);

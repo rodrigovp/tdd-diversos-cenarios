@@ -1,4 +1,4 @@
-package org.picpay.tdddiversoscenarios.monolito;
+package org.rodnet.tdddiversoscenarios.monolito;
 
 import static java.math.BigDecimal.ONE;
 import static java.math.BigDecimal.TEN;
