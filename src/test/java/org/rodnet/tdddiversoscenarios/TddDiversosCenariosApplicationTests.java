@@ -1,4 +1,4 @@
-package org.picpay.tdddiversoscenarios;
+package org.rodnet.tdddiversoscenarios;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

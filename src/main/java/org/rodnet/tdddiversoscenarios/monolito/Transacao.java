@@ -1,4 +1,4 @@
-package org.picpay.tdddiversoscenarios.monolito;
+package org.rodnet.tdddiversoscenarios.monolito;
 
 import java.math.BigDecimal;
 import java.util.UUID;
