@@ -1,4 +1,4 @@
-package org.rodnet.tdddiversoscenarios.monolito;
+package org.rodnet.tdddiversoscenarios.sproutMethod;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,7 @@ import static java.math.BigDecimal.TEN;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
-import static org.rodnet.tdddiversoscenarios.monolito.TransacaoTest.umaTransacaoValidaQualquer;
+import static org.rodnet.tdddiversoscenarios.sproutMethod.TransacaoTest.umaTransacaoValidaQualquer;
 
 class GerenteTest {
 	

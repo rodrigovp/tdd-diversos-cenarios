@@ -1,4 +1,4 @@
-package org.rodnet.tdddiversoscenarios.monolito;
+package org.rodnet.tdddiversoscenarios.sproutMethod;
 
 import static java.math.BigDecimal.ONE;
 import static java.math.BigDecimal.TEN;
@@ -6,9 +6,9 @@ import static java.util.UUID.randomUUID;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
+import org.rodnet.tdddiversoscenarios.wrapMethod.Transacao;
 
 public class TransacaoTest {
 
