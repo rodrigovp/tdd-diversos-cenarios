@@ -25,8 +25,8 @@ class GerenteTest {
 	
 	@Test
 	void somenteGuardarTransacoesComValorMaiorQue10() {
-		Transacao transacaoPequena = umaTransacaoValidaQualquer(TEN);
-		Transacao transacaoGrande = umaTransacaoValidaQualquer(TEN.add(BigDecimal.ONE));
+		var transacaoPequena = umaTransacaoValidaQualquer(TEN);
+		var transacaoGrande = umaTransacaoValidaQualquer(TEN.add(BigDecimal.ONE));
 		
 		gerente.selecionar(Arrays.asList(transacaoPequena, transacaoGrande));
 		
