@@ -14,25 +14,25 @@ public class TransacaoTest {
 
 	@Test
 	void igualdadeDeTransacoes() {
-		UUID id = UUID.randomUUID();
-		Transacao umaTransacao = new Transacao(id, ONE);
-		Transacao outraTransacao = new Transacao(id, TEN);
+		var id = randomUUID();
+		var umaTransacao = new Transacao(id, ONE);
+		var outraTransacao = new Transacao(id, TEN);
 		
 		assertThat(umaTransacao).isEqualTo(outraTransacao);
 	}
 	
 	@Test
 	void desigualdadeDeTransacoes() {
-		Transacao umaTransacao = umaTransacaoValidaQualquer();
-		Transacao outraTransacao = umaTransacaoValidaQualquer();
+		var umaTransacao = umaTransacaoValidaQualquer();
+		var outraTransacao = umaTransacaoValidaQualquer();
 		
 		assertThat(umaTransacao).isNotEqualTo(outraTransacao);
 	}
 	
 	@Test
 	void transacaoBaixa() {
-		Transacao transacaoBaixa = umaTransacaoValidaQualquer(new BigDecimal("9.99"));
-		Transacao outraTransacaoBaixa = umaTransacaoValidaQualquer(BigDecimal.TEN);
+		var transacaoBaixa = umaTransacaoValidaQualquer(new BigDecimal("9.99"));
+		var outraTransacaoBaixa = umaTransacaoValidaQualquer(BigDecimal.TEN);
 		
 		assertThat(transacaoBaixa.possuiValorBaixo()).isTrue();
 		assertThat(outraTransacaoBaixa.possuiValorBaixo()).isTrue();
@@ -40,7 +40,7 @@ public class TransacaoTest {
 	
 	@Test
 	void transacaoAlta() {
-		Transacao transacaoAlta = umaTransacaoValidaQualquer(new BigDecimal("10.01"));
+		var transacaoAlta = umaTransacaoValidaQualquer(new BigDecimal("10.01"));
 		
 		assertThat(transacaoAlta.possuiValorBaixo()).isFalse();
 
