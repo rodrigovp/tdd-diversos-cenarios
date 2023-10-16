@@ -1,19 +1,16 @@
 package org.rodnet.tdddiversoscenarios.monolito;
 
-import static java.math.BigDecimal.TEN;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.rodnet.tdddiversoscenarios.monolito.TransacaoTest.umaTransacaoValidaQualquer;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static java.math.BigDecimal.TEN;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.*;
+import static org.rodnet.tdddiversoscenarios.monolito.TransacaoTest.umaTransacaoValidaQualquer;
 
 class GerenteTest {
 	
@@ -28,8 +25,8 @@ class GerenteTest {
 	
 	@Test
 	void somenteGuardarTransacoesComValorMaiorQue10() {
-		Transacao transacaoPequena = TransacaoTest.umaTransacaoValidaQualquer(TEN);
-		Transacao transacaoGrande = TransacaoTest.umaTransacaoValidaQualquer(TEN.add(BigDecimal.ONE));
+		var transacaoPequena = umaTransacaoValidaQualquer(TEN);
+		var transacaoGrande = umaTransacaoValidaQualquer(TEN.add(BigDecimal.ONE));
 		
 		gerente.selecionar(Arrays.asList(transacaoPequena, transacaoGrande));
 		
@@ -39,7 +36,7 @@ class GerenteTest {
 	
 	@Test
 	void naoGuardarTransacoesRepetidas() {
-		Transacao transacao = TransacaoTest.umaTransacaoValidaQualquer(TEN);
+		var transacao = umaTransacaoValidaQualquer(TEN);
 		
 		gerente.selecionar(Arrays.asList(transacao, transacao));
 		
@@ -48,7 +45,7 @@ class GerenteTest {
 	
 	@Test
 	void removerRepetidos() {
-		Transacao transacao = TransacaoTest.umaTransacaoValidaQualquer(TEN);
+		var transacao = umaTransacaoValidaQualquer(TEN);
 		List<Transacao> transacoes = Arrays.asList(transacao, transacao);
 		
 		assertThat(transacoes).contains(transacao, transacao);

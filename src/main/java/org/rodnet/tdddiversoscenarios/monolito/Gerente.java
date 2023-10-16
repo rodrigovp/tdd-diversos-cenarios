@@ -22,6 +22,6 @@ public class Gerente {
 	}
 
 	List<Transacao> removerRepetidos(List<Transacao> transacoes) {
-		return new ArrayList<Transacao>(new HashSet<Transacao>(transacoes));
+		return new ArrayList<>(new HashSet<>(transacoes));
 	}
 }
