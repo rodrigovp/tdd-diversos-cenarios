@@ -1,4 +1,4 @@
-package org.rodnet.tdddiversoscenarios.monolito;
+package org.rodnet.tdddiversoscenarios.sproutMethod;
 
 public interface RepositorioTransacoes {
 

@@ -1,4 +1,4 @@
-package org.rodnet.tdddiversoscenarios.monolito;
+package org.rodnet.tdddiversoscenarios.sproutMethod;
 
 import static java.math.BigDecimal.ONE;
 import static java.math.BigDecimal.TEN;
