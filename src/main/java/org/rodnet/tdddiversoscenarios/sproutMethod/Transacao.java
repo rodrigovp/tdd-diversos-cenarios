@@ -1,4 +1,4 @@
-package org.rodnet.tdddiversoscenarios.wrapMethod;
+package org.rodnet.tdddiversoscenarios.sproutMethod;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

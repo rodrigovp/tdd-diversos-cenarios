@@ -13,12 +13,9 @@ public class Empregado {
     private RH rh;
 
     public void pagar(YearMonth anoMes){
-        BigDecimal salario = BigDecimal.ZERO;
-        trabalhos.forEach(trabalho -> {
-            if(trabalho.feitoNeste(anoMes)){
-                salario = salario.add(trabalho.valor());
-            }
-        });
-        rh.pagar(salario);
+        rh.pagar(trabalhos.stream()
+                .filter(t -> t.feitoNeste(anoMes))
+                .map(Trabalho::valor)
+                .reduce(BigDecimal.ZERO, BigDecimal::add));
     }
 }

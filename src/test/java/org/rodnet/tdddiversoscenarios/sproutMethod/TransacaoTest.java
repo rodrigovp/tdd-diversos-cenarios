@@ -8,7 +8,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.math.BigDecimal;
 
 import org.junit.jupiter.api.Test;
-import org.rodnet.tdddiversoscenarios.wrapMethod.Transacao;
 
 public class TransacaoTest {
 
